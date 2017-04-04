@@ -8,6 +8,7 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
         classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.3"
+        classpath "gradle.plugin.net.foragerr.jmeter:jmeter-gradle-plugin:1.0.7-3.0-BETA"
     }
 }
 
@@ -17,6 +18,7 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'org.sonarqube'
 apply plugin: 'war'
+apply plugin: 'net.foragerr.jmeter'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -75,4 +77,9 @@ sonarqube {
 //Note: Run this task only if you do not have a local gradle installed. 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.10'
+}
+
+jmeter {
+  jmTestFiles = [file("testsrc/jmeter/ask-gradle-proj.jmx")]
+  enableExtendedReports = true 
 }
