@@ -5,4 +5,4 @@ Feature: Example feature
 
   Scenario: Reading documentation
     Given I am on the ASK Home Page
-    Then I should see "Welcome to gradle war creation"
+    Then I should see "Welcome to gradle war"
