@@ -1,4 +1,4 @@
-require('chromedriver');
+require('geckodriver');
 var seleniumWebdriver = require('selenium-webdriver');
 var {defineSupportCode} = require('cucumber');
 
