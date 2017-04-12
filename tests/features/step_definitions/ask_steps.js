@@ -2,7 +2,7 @@ var seleniumWebdriver = require('selenium-webdriver');
 var {defineSupportCode} = require('cucumber');
 
 defineSupportCode(function({setDefaultTimeout, Given, Then}) {
-    setDefaultTimeout(60 * 1000);
+    setDefaultTimeout(-1);
     Given('I am on the ASK Home Page', function() {
         return this.driver.get('http://www.google.com');
     });
