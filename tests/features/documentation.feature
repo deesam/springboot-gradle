@@ -1,11 +1,8 @@
 Feature: Example feature
-  As a user of Cucumber.js
-  I want to have documentation on Cucumber
+  As a user of ASK application
+  I want to test ASK home page
   So that I can concentrate on building awesome applications
 
   Scenario: Reading documentation
-    Given I am on the Cucumber.js GitHub repository
-    When I enter username
-    When I enter password
-    When I submit
-    Then I should see "PIMT-669"
+    Given I am on the ASK Home Page
+    Then I should see "Welcome to gradle war creation"
