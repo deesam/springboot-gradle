@@ -1,13 +1,11 @@
-
+require('chromedriver');
 var seleniumWebdriver = require('selenium-webdriver');
-var phantomjs = require('phantomjs');
 var {defineSupportCode} = require('cucumber');
 
 function CustomWorld() {
     this.driver = new seleniumWebdriver.Builder()
-        .withCapabilities({"phantomjs.binary.path":phantomjs.path})
-  		.forBrowser('phantomjs')
-  		.build();
+        .forBrowser('chrome')
+        .build();
 }
 
 defineSupportCode(function({setWorldConstructor}) {
