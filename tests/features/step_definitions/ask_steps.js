@@ -3,7 +3,7 @@ var {defineSupportCode} = require('cucumber');
 
 defineSupportCode(function({setDefaultTimeout, Given, Then}) {
     setDefaultTimeout(60 * 1000);
-    Given('I am on the Cucumber.js GitHub repository', function() {
+    Given('I am on the ASK Home Page', function() {
         return this.driver.get('http://localhost:8983/ask-gradle-proj/');
     });
 
